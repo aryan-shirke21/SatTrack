@@ -90,7 +90,7 @@ pip install -r requirements.txt
 ## Usage
 
 **Download TLE catalog** from Space-Track.org (free account required):
-- Login → Bulk Data → Full Catalog → 3LE format
+- Login → Recent ELSETs → Current Catalog Files → Full Catalog → 3LE format
 - Save as `data/catalog.txt`
 
 **Run the pipeline:**
