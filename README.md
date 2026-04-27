@@ -134,6 +134,8 @@ Monte Carlo Pc estimation takes into account 1000 samples. For real-life conjunc
 Both Pc and impact outcome depend on the relative velocity of closest approach. High relative velocity (collision head-on, ∼15 km/s) creates more debris than low relative velocity (collision co-orbiting, ∼0.1 km/s). In this work, only Pc is calculated from positional data, without weighting for impact consequences.
 
 ## Project Structure
+
+```
 SatTrack/
 ├── data/
 │   └── catalog.txt          # TLE catalog from Space-Track.org
@@ -154,6 +156,7 @@ SatTrack/
 ├── requirements.txt         # Python dependencies
 └── README.md
 
+```
 ## Background — Key Concepts
 
 **TLE (Two-Line Element):** A standardized format for encoding a satellite's 
