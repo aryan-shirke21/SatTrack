@@ -1,0 +1,8 @@
+poliastro
+astropy
+numpy
+matplotlib
+pandas
+requests
+scipy
+sgp4
