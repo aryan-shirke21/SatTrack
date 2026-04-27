@@ -8,26 +8,30 @@ An SSA system that automatically filters through thousands of TLE objects to det
 More than 27,000 objects have been observed in Earth’s orbit at speeds of around 
 28,000 kilometers per hour. One collision between any two such objects creates many new debris particles that might collide with other particles in turn, creating what is called Kessler Syndrome. This process starts with automated conjunction screening which is the first step towards dealing with the problem. The SatTrack software uses the screening methodology similar to that of NASA’s CARA and ESA’s Space Debris office, modified for rapid prototyping and experimentation.
 
+
 ## Pipeline Architecture
+
+```
 TLE Catalog (Space-Track.org)
-↓
+        ↓
 TLE Parser + Age Filter
 (only TLEs < 30 days old)
-↓
+        ↓
 SGP4 Orbit Propagation
 (7-day position tables, 1-min steps)
-↓              
+        ↓
 MOID Pre-filter
 (geometric orbit intersection distance)
-↓
+        ↓
 Fine Conjunction Screening
 (KDTree nearest-neighbor, minute-resolution)
-↓
+        ↓
 Collision Probability
 (Alfano method + Monte Carlo)
-↓
+        ↓
 Conjunction Report + Visualizations
 (CSV + 3D plots + distance-time plots)
+```
 
 ## Key Features
 
