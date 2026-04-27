@@ -11,27 +11,7 @@ More than 27,000 objects have been observed in Earth’s orbit at speeds of arou
 
 ## Pipeline Architecture
 
-```
-TLE Catalog (Space-Track.org)
-        ↓
-TLE Parser + Age Filter
-(only TLEs < 30 days old)
-        ↓
-SGP4 Orbit Propagation
-(7-day position tables, 1-min steps)
-        ↓
-MOID Pre-filter
-(geometric orbit intersection distance)
-        ↓
-Fine Conjunction Screening
-(KDTree nearest-neighbor, minute-resolution)
-        ↓
-Collision Probability
-(Alfano method + Monte Carlo)
-        ↓
-Conjunction Report + Visualizations
-(CSV + 3D plots + distance-time plots)
-```
+TLE Catalog (Space-Track.org) -> TLE Parser + Age Filter (only TLEs < 30 days old) -> SGP4 Orbit Propagation -> (7-day position tables, 1-min steps) -> MOID Pre-filter (geometric orbit intersection distance) -> Fine Conjunction Screening (KDTree nearest-neighbor, minute-resolution) -> Collision Probability (Alfano method + Monte Carlo) -> Conjunction Report + Visualizations (CSV + 3D plots + distance-time plots)
 
 ## Key Features
 
